@@ -1,5 +1,5 @@
 function hello(name, lastname, years) {
-    alert(`Hola señor ${name} ${lastname}, usted tiene ${years} años.`);
+    return `Hola ${name} ${lastname}, tienes ${years} años de edad`;
 }
 
 let result = hello('John', 'Anderton', 35)
