@@ -1,5 +1,18 @@
 function pingPong() {
 
+    for (let i = 1; i < 101; i++){
+        let element = i;
+       
+        if(i%10===0){
+            element="PONG"
+        }else if(i%5===0){
+            element="PING"
+        }
+
+        console.log(element);
+        
+    }
+
 }
 
 pingPong()
