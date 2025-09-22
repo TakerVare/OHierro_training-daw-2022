@@ -4,9 +4,9 @@ function pingPong() {
         let element = i;
        
         if(i%10===0){
-            element="PONG"
+            element= element + " PONG"
         }else if(i%5===0){
-            element="PING"
+            element= element + " PING"
         }
 
         console.log(element);
