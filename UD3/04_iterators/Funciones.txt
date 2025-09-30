@@ -1,0 +1,105 @@
+## CallBack ##
+
+const isValid = function(value) { return value > 18; }
+
+let result = isValid(13);
+result = isValid(19);
+
+
+## Funciones Flecha ##
+
+let sum = (a, b) => a + b;
+alert(sum(1, 2)); //3
+
+
+## select ##
+
+function select(array, condition) {
+
+}
+
+## forEach ##
+//El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+
+//Sintaxis
+arr.forEach(function callback(currentValue, index, array) {
+    // tu iterador
+}[, thisArg]);
+
+//Ejemplo
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+
+
+## map ##
+/*
+El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+*/
+//Sintaxis
+let nuevo_array = arr.map(function callback(currentValue, index, array) {
+    // Elemento devuelto de nuevo_array
+}[, thisArg])
+
+//Ejemplo
+var numbers = [1, 5, 10, 15];
+var doubles = numbers.map(function (x) {
+  return x * 2;
+});
+// doubles is now [2, 10, 20, 30]
+// numbers is still [1, 5, 10, 15]
+
+
+## filter ##
+/*
+El método filter() crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.
+*/
+// Sintaxis
+var newArray = arr.filter(callback(currentValue[, index[, array]])[, thisArg])
+
+//Ejemplo
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+
+## reduce ##
+/*
+El método reduce() ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor.
+*/
+// Sintaxis
+arr.reduce(callback(acumulador, valorActual[, índice[, array]])[, valorInicial])
+
+//Ejemplo
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+// Otro ejemplo
+let numbers = [1, 2, 3, 4, 5, 10, 15, 30];
+let totalPairs = numbers.reduce(function(accumulator, currentValue){
+	if(currentValue % 2 == 0) {
+		return accumulator + currentValue
+	}else{
+		return accumulator
+	}
+}, 0)
+
+console.log(`Total value or pairs ${totalPairs}`);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+
+
