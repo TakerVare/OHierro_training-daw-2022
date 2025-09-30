@@ -1,5 +1,13 @@
 function evenNumbers() {
-
+    let result = "2";
+    for(let i=4; i<100; i++){
+        if(i%2===0){
+            result = result+', '+i
+        }
+        
+    }
+    
+    console.log(result)
 }
 
 evenNumbers();
